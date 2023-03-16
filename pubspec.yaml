@@ -7,8 +7,10 @@ environment:
   sdk: '>=2.19.4 <3.0.0'
 
 dependencies:
+  connectivity_plus: ^3.0.3
   flutter:
     sdk: flutter
+  go_router: ^6.2.0
 
 dev_dependencies:
   flutter_test:
