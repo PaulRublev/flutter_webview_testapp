@@ -2,7 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:go_router/go_router.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
+import 'package:test_app_webview/ui/url_viewer.dart';
 
 class Root extends StatefulWidget {
   const Root({super.key});
@@ -14,21 +15,14 @@ class Root extends StatefulWidget {
 class _RootState extends State<Root> {
   late final StreamController<ConnectivityResult> _controller =
       StreamController();
-  final Widget loading = const Align(
-    alignment: Alignment.topCenter,
-    child: Padding(
-      padding: EdgeInsets.only(top: 10),
-      child: CircularProgressIndicator(),
-    ),
-  );
-  final Widget offline = const Center(
-    child: Text('Network connection required to continue'),
-  );
+  final Widget loading = const CircularProgressIndicator();
+  final Widget offline = const Text('Network connection required to continue');
 
   @override
   void initState() {
     super.initState();
     _controller.addStream(Connectivity().onConnectivityChanged);
+    // SharedPreferences.getInstance().then((value) => value.clear()); // todo remove
   }
 
   @override
@@ -51,13 +45,7 @@ class _RootState extends State<Root> {
                       snapshot.data == ConnectivityResult.none)) {
                 body = offline;
               } else {
-                // todo check local url -> go wView
-                // or request url from Firebase RemConf -> save local, go wView
-                // or go mockWidget
-                // body = const Browser();
-                WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-                  context.go('/browser');
-                });
+                body = const UrlViewer();
               }
               break;
             default:
