@@ -8,6 +8,10 @@ environment:
 
 dependencies:
   connectivity_plus: ^3.0.3
+  device_info_plus: ^8.1.0
+  firebase_analytics: ^10.1.6
+  firebase_core: ^2.8.0
+  firebase_remote_config: ^3.0.15
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.2

@@ -15,16 +15,14 @@ class MainApp extends StatelessWidget {
       GoRoute(
         path: '/',
         builder: (context, state) => const Root(),
-        routes: [
-          GoRoute(
-            path: 'mock',
-            builder: (context, state) => const MockWidget(),
-          ),
-          GoRoute(
-            path: 'browser',
-            builder: (context, state) => const Browser(),
-          ),
-        ],
+      ),
+      GoRoute(
+        path: '/mock',
+        builder: (context, state) => const MockWidget(),
+      ),
+      GoRoute(
+        path: '/browser',
+        builder: (context, state) => const Browser(),
       ),
     ],
   );

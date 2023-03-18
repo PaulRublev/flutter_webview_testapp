@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
-// import 'package:shared_preferences/shared_preferences.dart';
+import 'package:test_app_webview/ui/offline_text.dart';
 import 'package:test_app_webview/ui/url_viewer.dart';
 
 class Root extends StatefulWidget {
@@ -13,16 +13,13 @@ class Root extends StatefulWidget {
 }
 
 class _RootState extends State<Root> {
-  late final StreamController<ConnectivityResult> _controller =
-      StreamController();
-  final Widget loading = const CircularProgressIndicator();
-  final Widget offline = const Text('Network connection required to continue');
+  final StreamController<ConnectivityResult> _controller = StreamController();
+  final Widget offline = const OfflineText();
 
   @override
   void initState() {
     super.initState();
     _controller.addStream(Connectivity().onConnectivityChanged);
-    // SharedPreferences.getInstance().then((value) => value.clear()); // todo remove
   }
 
   @override
@@ -31,7 +28,7 @@ class _RootState extends State<Root> {
       body: StreamBuilder<ConnectivityResult>(
         stream: _controller.stream,
         builder: (context, snapshot) {
-          Widget body = loading;
+          Widget body = const CircularProgressIndicator();
           switch (snapshot.connectionState) {
             case ConnectionState.waiting:
               body = offline;
@@ -50,7 +47,7 @@ class _RootState extends State<Root> {
               break;
             default:
           }
-          return body;
+          return Center(child: body);
         },
       ),
     );
