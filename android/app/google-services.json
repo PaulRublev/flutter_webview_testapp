@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "853295197940",
-    "project_id": "webview-testapp",
-    "storage_bucket": "webview-testapp.appspot.com"
+    "project_number": "794732052435",
+    "project_id": "paesru-c9d99",
+    "storage_bucket": "paesru-c9d99.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:853295197940:android:4eec8c0db820e6585938a1",
+        "mobilesdk_app_id": "1:794732052435:android:6eddc54bfb5cd4a9963926",
         "android_client_info": {
           "package_name": "esports.teamgame"
         }
       },
       "oauth_client": [
         {
-          "client_id": "853295197940-hpbtj8bbkmutab5up67o3nbn0pol7svf.apps.googleusercontent.com",
+          "client_id": "794732052435-93suirchv57sgq8iifi4lo51om2skv0e.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDl3XQTZ6wKqiiZt1qLiIi2DXiyCUpaMRk"
+          "current_key": "AIzaSyAOAqP2qnnWCI95YJz191gYkH9FKRZGLdw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "853295197940-hpbtj8bbkmutab5up67o3nbn0pol7svf.apps.googleusercontent.com",
+              "client_id": "794732052435-93suirchv57sgq8iifi4lo51om2skv0e.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
