@@ -104,7 +104,7 @@ class FoodNutrient {
   factory FoodNutrient.fromJson(Map<String, dynamic>? json) {
     return FoodNutrient(
       nutrient: Nutrient.fromJson(json?['nutrient']),
-      amount: json?['amount'].toDouble() ?? 0.0,
+      amount: json?['amount']?.toDouble() ?? 0.0,
     );
   }
 }
@@ -182,7 +182,7 @@ class NutrientValue {
 
   factory NutrientValue.fromJson(Map<String, dynamic>? json) {
     return NutrientValue(
-      value: json?['value'].toDouble() ?? 0.0,
+      value: json?['value']?.toDouble() ?? 0.0,
     );
   }
 }
