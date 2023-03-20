@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_app_webview/ui/mock/mocks/mock_list.dart';
+import 'package:test_app_webview/ui/mock/mock_list.dart';
 
 class MockWidget extends StatelessWidget {
   const MockWidget({super.key});

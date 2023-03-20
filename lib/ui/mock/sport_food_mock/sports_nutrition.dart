@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_app_webview/ui/mock/mocks/bottom_bar.dart';
+import 'package:test_app_webview/ui/mock/sport_food_mock/bottom_bar.dart';
 
 class SportsNutrition extends StatelessWidget {
   const SportsNutrition({super.key});

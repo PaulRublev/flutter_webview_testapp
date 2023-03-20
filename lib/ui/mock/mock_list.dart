@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:test_app_webview/ui/mock/mocks/sports_nutrition.dart';
+import 'package:test_app_webview/ui/mock/sport_food_mock/sports_nutrition.dart';
 
 class MockList {
   static final List<Widget> _mockList = <Widget>[

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test_app_webview/ui/mock/mocks/user_data_widget.dart';
+import 'package:test_app_webview/ui/mock/sport_food_mock/dishes.dart';
+import 'package:test_app_webview/ui/mock/sport_food_mock/user_data_widget.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({super.key});
@@ -31,15 +32,18 @@ class _BottomBarState extends State<BottomBar>
       body: TabBarView(
         physics: const NeverScrollableScrollPhysics(),
         controller: _tabController,
-        children: [
+        children: const [
           UserDataWidget(),
-          Text('2'),
+          Dishes(),
         ],
       ),
       bottomNavigationBar: ValueListenableBuilder(
         valueListenable: _tabNotifier,
         builder: (context, index, _) {
           return BottomNavigationBar(
+            backgroundColor: Colors.blue,
+            selectedItemColor: Colors.white,
+            unselectedItemColor: Colors.black38,
             items: const [
               BottomNavigationBarItem(
                 icon: Icon(Icons.calculate),
