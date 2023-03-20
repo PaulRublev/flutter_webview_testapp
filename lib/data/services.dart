@@ -9,7 +9,6 @@ class Services {
     RemoteConfigApi? remoteConfig,
     LocalConfigApi? localConfig,
   }) {
-    // this.remoteConfig = remoteConfig ?? RemoteConfigImpl();
     this.remoteConfig = remoteConfig ?? FirebaseConfig.instance;
     this.localConfig = localConfig ?? LocalConfigImpl();
   }
